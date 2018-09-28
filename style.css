@@ -1,0 +1,80 @@
+body{
+
+}
+
+/* reusable */
+.pre-content{
+    min-height: 470px;
+}
+
+ul{
+    padding: 0px;
+}
+
+
+/* HEADER */
+.header{
+    border: 1px black solid;
+    display: flex
+}
+
+.header_title{
+    text-align: center;
+    width: 70%;
+    text-transform: uppercase; 
+}
+
+.header-logo{
+    margin: 10px;
+    width: 30%
+}
+
+
+/* content */
+
+.content{
+    display: inline-flex;
+    width: 100%;
+}
+
+.menu-side{
+    border: 1px black solid;
+    width: 15%;
+}
+
+
+.menu-side ul{
+    text-decoration: none;
+    list-style: none;
+}
+
+.menu-side ul li{
+    padding: 5px;
+    widows: 150px;
+}
+
+.menu-side ul li:hover{
+    background: lightgreen;
+    font-weight: bold;
+}
+
+.menu-side ul li a{
+    text-decoration: none;
+}
+
+.main-content{
+    border: 1px black solid;
+    width: 85%;
+    text-align: center;
+}
+
+.footer{
+    border: 1px black solid;
+    text-align: center;
+    background: lightgray;
+}
+
+/* Loginpage */
+.loginpage-content{
+    margin: 20px;
+}
