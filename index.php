@@ -1,3 +1,8 @@
+<?php
+if (!isset($_SESSION)) {
+    session_start();
+}
+?>
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
@@ -21,32 +26,56 @@
             <div class="header_title">
                 <h1>hospital sim - fct</h1>
              </div>
+             <div>
+                <?php
+                    echo "Today is: " . date("F d") . "," . date("Y");
+                ?>
+             </div>
         </div>
     </section>
     <section class="content">
         <div class="menu-side pre-content">
             <ul>
-                <li><a href="index.php?operation=homepage">Opcoes</a></li>
-                <li><a href="#">Apresentacao</a></li>
-                <li><a href="index.php?operation=loginpage">Login</a></li>
+                <li><a href="index.php?operation=homepage">Apresentacao/Presentation</a></li>
+                <li><a href="#">Opcoes/options</a></li>
+                <li id="logbutton">
+                    <!-- <a href="index.php?operation=loginpage">Login</a> -->
+                    <?php
+                    if (isset($_SESSION['authuser']) && $_SESSION['authuser'] == 1) {
+                        echo "<a href='logout.php'>Logout</a>";
+                    } else {
+                        echo "<a href='index.php?operation=loginpage'>Login</a>";
+                    }
+                    ?>
+                </li>
             </ul>
 
         </div>
 
-
-        <?php 
-            if(isset($_GET["operation"])){
+        <?php
+            if (isset($_GET["operation"])) {
                 switch ($_GET["operation"]) {
                     case "homepage":
                         include("homepage.php");
                         break;
+                    // case "checkLogin":
+                    //     include("checkLogin.php");
+                    //     break;
+                    // case "logout":
+                    //     include("logout.php");
+                    //     break;
                     case "loginpage":
-                        include("loginpage.php");;
+                        include("loginpage.php");
                         break;
                 }
-            }else{
-                include("homepage.php");
+            } else {
+                if (isset($_SESSION['authuser']) && $_SESSION['authuser'] == 1) {
+                    include("homepage.php");
+                } else {
+                    include("loginpage.php");
+                }
             }
+           
  
         ?>
       
