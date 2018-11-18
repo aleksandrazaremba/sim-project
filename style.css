@@ -38,10 +38,10 @@ ul{
 }
 
 .menu-side{
-    border: 1px black solid;
-    width: 15%;
+    /* border: 1px black solid; */
+    width: 13%;
+    background-color: #31ACE0;
 }
-
 
 .menu-side ul{
     text-decoration: none;
@@ -49,32 +49,129 @@ ul{
 }
 
 .menu-side ul li{
-    padding: 5px;
-    widows: 150px;
+    /* padding: 5px;
+    widows: 150px; */
+    /* background-color: #00b1b1; */
+    color: black;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
 }
 
 .menu-side ul li:hover{
-    background: lightgreen;
+    /* background: lightgreen; */
+    background: #0285b4;
     font-weight: bold;
+}
+
+.menu-side ul li:active{
+    background-color: #006565;
+    color: white;
 }
 
 .menu-side ul li a{
     text-decoration: none;
+    color: black;
 }
 
 .main-content{
-    border: 1px black solid;
-    width: 85%;
+    
+    width: 87%;
     text-align: center;
 }
 
 .footer{
-    border: 1px black solid;
+    border: 1px solid #0285b4;
     text-align: center;
-    background: lightgray;
+    background: #0285b4;
 }
 
-/* Loginpage */
-.loginpage-content{
-    margin: 20px;
+
+/* login & register */
+.loginpage-container {
+    padding: 16px;
+    background-color: white;
 }
+.loginpage{
+display: inline-flex;
+}
+
+.loginpage-container form{
+width: 40%;
+margin: 10px;
+float: left;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.registerbtn {
+    background-color: #e72f83;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+a {
+    color: dodgerblue;
+}
+
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+/*User account*/
+input.hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+#profile-image1 {
+    cursor: pointer;
+  
+     width: 100px;
+    height: 100px;
+	border:2px solid #03b1ce ;}
+	.tital{ font-size:16px; font-weight:500;}
+     .bot-border{ border-bottom:1px #f8f8f8 solid;  margin:5px 0  5px 0}	
+     
+     /*Userlist*/
+
+     i {  vertical-align: middle; }
+.table-users tbody tr:hover {
+	cursor: pointer;
+	background-color: #eee;
+}
+.nav-user-photo {
+     vertical-align: middle;
+}
+.user_panel {
+    width: 50%;
+}
+
+/**/

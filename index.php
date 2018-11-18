@@ -13,6 +13,14 @@ if (!isset($_SESSION)) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
     <link rel="Stylesheet" type="text/css" href="style.css"/>
+
+
+
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://use.fontawesome.com/1e803d693b.js"></script>
 </head>
 
 <body>
@@ -36,8 +44,16 @@ if (!isset($_SESSION)) {
     <section class="content">
         <div class="menu-side pre-content">
             <ul>
-                <li><a href="index.php?operation=homepage">Apresentacao/Presentation</a></li>
-                <li><a href="#">Opcoes/options</a></li>
+                <li><a href="index.php?operation=homepage">Presentation</a></li>
+                <li><a href="#">Options</a></li>
+
+
+
+<li><a href="index.php?operation=account">My account</a></li>
+<li><a href="index.php?operation=userlist">User list</a></li>
+
+
+
                 <li id="logbutton">
                     <!-- <a href="index.php?operation=loginpage">Login</a> -->
                     <?php
@@ -48,6 +64,7 @@ if (!isset($_SESSION)) {
                     }
                     ?>
                 </li>
+
             </ul>
 
         </div>
@@ -58,9 +75,12 @@ if (!isset($_SESSION)) {
                     case "homepage":
                         include("homepage.php");
                         break;
-                    // case "checkLogin":
-                    //     include("checkLogin.php");
-                    //     break;
+                     case "account":
+                         include("account.php");
+                         break;
+                     case "userlist":
+                         include("userlist.php");
+                         break;
                     // case "logout":
                     //     include("logout.php");
                     //     break;
