@@ -19,7 +19,7 @@
                                     <i class="fa fa-2x fa-user fw"></i>
                                 </td>
                                 <td>
-                                     John Smith<br><i class="fa"></i>
+                                     John Sm<br><i class="fa"></i>
                                 </td>
                                 <td>
                                     Builder Admin
